@@ -1,4 +1,4 @@
-# 🌐 Infrastructure Web & Application Métier — SAÉ 203
+# 🌐Mettre en place une solution informatique pour l’entreprise  — SAÉ 203
 
 Ce projet a été réalisé dans le cadre de la SAÉ 203 (Mettre en place une solution informatique pour l'entreprise). Il consiste à déployer de manière entièrement conteneurisée, automatisée et sécurisée une infrastructure web d'entreprise comprenant un site vitrine/portfolio, un CMS WordPress intégrant des fonctionnalités applicatives avancées connectées à une base MariaDB, ainsi qu'un conteneur d'étude en cybersécurité.
 
@@ -43,6 +43,6 @@ L'hôte de destination doit disposer d'un environnement Linux exécutant le mote
 Pour déployer toute l'infrastructure (téléchargement des images officielles, build du portfolio, création du réseau virtuel, montage des volumes et configurations des permissions), exécutez les commandes suivantes dans le terminal :
 
 ```bash
-cd ~/sae203/
+cd ~/projet_wordpress/
 chmod +x scriptps1.sh
 ./scriptps1.sh
